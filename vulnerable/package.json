@@ -1,0 +1,9 @@
+{
+  "name": "xss-lab-vulnerable",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Guestbook DELIBERADAMENTE vulnerable a XSS. Solo para aprender a defender, en 127.0.0.1.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.19.2" }
+}

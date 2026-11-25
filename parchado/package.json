@@ -1,0 +1,9 @@
+{
+  "name": "xss-lab-parchado",
+  "version": "1.0.0",
+  "private": true,
+  "description": "El mismo guestbook, ahora protegido contra XSS. Compara con vulnerable/.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.19.2" }
+}

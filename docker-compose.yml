@@ -1,0 +1,17 @@
+# Levanta ambos a la vez:  docker compose up
+# Vulnerable -> http://127.0.0.1:3000   ·   Parchado -> http://127.0.0.1:3001
+services:
+  vulnerable:
+    image: node:20-alpine
+    working_dir: /app
+    volumes: [ "./vulnerable:/app" ]
+    command: sh -c "npm install --no-audit --no-fund && node server.js"
+    environment: [ "PORT=3000" ]
+    ports: [ "127.0.0.1:3000:3000" ]
+  parchado:
+    image: node:20-alpine
+    working_dir: /app
+    volumes: [ "./parchado:/app" ]
+    command: sh -c "npm install --no-audit --no-fund && node server.js"
+    environment: [ "PORT=3001" ]
+    ports: [ "127.0.0.1:3001:3001" ]
